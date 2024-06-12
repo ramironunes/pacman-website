@@ -1,125 +1,46 @@
-# Project Template
+# Getting Started with Create React App
 
-This repository is a template for creating new projects. It includes a basic structure and setup to get you started quickly.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Table of Contents
+## Available Scripts
 
-- [Project Template](#project-template)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Features](#features)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Project Structure](#project-structure)
+In the project directory, you can run:
 
-## Installation
+### `npm start`
 
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/yourusername/project-template.git
-    cd project-template
-    ```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-2. **Install the dependencies:**
-    ```bash
-    # Example for Python
-    pip install -r deployment/requirements.txt
-    # Example for Node.js
-    npm install
-    ```
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## Usage
+### `npm test`
 
-1. **Run the application:**
-    ```bash
-    # Example for Python
-    python src/main_file.py
-    # Example for Node.js
-    node src/main_file
-    ```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-2. **Run the application with Docker:**
-    ```bash
-    docker-compose -f docker/docker-compose.yml up --build
-    ```
+### `npm run build`
 
-## Features
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- Modular structure
-- Docker support
-- Basic CI setup with GitHub Actions
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Contributing
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+### `npm run eject`
 
-## License
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Project Structure
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-```plaintext
-project-template/
-│
-├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   │   └── bug_report.md
-│   │   └── feature_request.md
-│   ├── PULL_REQUEST_TEMPLATE.md
-│   └── workflows/
-│       └── ci.yml
-│
-├── docs/
-│   ├── index.md
-│   ├── getting_started.md
-│   └── api_reference.md
-│
-├── src/
-│   ├── main_file.py  # Main entry point (e.g., main.py, index.js)
-│   ├── abstracts/
-│   │   └── base_abstract.py
-│   ├── configs/
-│   │   └── config.py
-│   ├── controllers/
-│   │   └── user_controller.py
-│   ├── models/
-│   │   └── user_model.py
-│   ├── modules/
-│   │   └── module_file.py
-│   ├── routes/
-│   │   └── user_routes.py
-│   ├── services/
-│   │   └── user_service.py
-│   ├── utils/
-│   │   └── date_utils.py
-│   ├── resources/
-│   │   ├── templates/
-│   │   │   └── base.html
-│   │   └── static/
-│   │       └── style.css
-│   ├── components/
-│   │   ├── Button.jsx  # Example React component
-│   │   ├── Modal.jsx  # Example React component
-│   │   └── UserList.jsx  # Example React component
-│
-├── tests/
-│   ├── test_main_file.py  # Test file for main (e.g., test_main.py, test_main.js)
-│   └── test_module_file.py  # Test file for module (e.g., test_example.py, test_example.js)
-│
-├── deployment/
-│   ├── requirements.txt  # Dependencies file
-│
-├── docker/
-│   ├── Dockerfile
-│   ├── docker-compose.yml
-│
-├── .gitignore
-├── .editorconfig
-├── LICENSE
-├── README.md
-├── setup.py  # Setup script for Python or other relevant configuration file
-├── CONTRIBUTING.md
-├── CODE_OF_CONDUCT.md
-└── CHANGELOG.md
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
