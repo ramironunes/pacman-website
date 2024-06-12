@@ -1,0 +1,6 @@
+[submodule "modules/react-frontend-core"]
+	path = modules/react-frontend-core
+	url = git@github.com:ramironunes/react-frontend-core.git
+[submodule "modules/scripts-core"]
+	path = modules/scripts-core
+	url = git@github.com:ramironunes/scripts-core.git
