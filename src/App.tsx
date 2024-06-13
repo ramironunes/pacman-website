@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/**
+ * @Author: Ramiro Luiz Nunes
+ * @Date:   2024-06-11 22:43:11
+ * @Last Modified by:   Ramiro Luiz Nunes
+ * @Last Modified time: 2024-06-11 23:14:01
+ */
 
-function App() {
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/header/Header';
+import Home from './pages/Home';
+import About from './pages/about/About';
+import Game from './pages/game/Game';
+import Analysis from './pages/analysis/Analysis';
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/game" element={<Game />} />
+        <Route path="/analysis" element={<Analysis />} />
+      </Routes>
+    </Router>
   );
 }
 
