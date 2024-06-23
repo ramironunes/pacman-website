@@ -1,8 +1,9 @@
 #!/bin/bash
+# ============================================================================
 # @Author: Ramiro Luiz Nunes
-# @Date:   2024-06-09 18:18:48
-# @Last Modified by:   Ramiro Luiz Nunes
-# @Last Modified time: 2024-06-09 20:24:21
+# @Date:   2024-06-22 18:55:04
+# @Info:   A brief description of the file
+# ============================================================================
 
 # Utility functions
 
