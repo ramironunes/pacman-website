@@ -1,31 +1,43 @@
+# ============================================================================
 # @Author: Ramiro Luiz Nunes
-# @Date:   2024-05-30 18:23:03
-# @Last Modified by:   Ramiro Luiz Nunes
-# @Last Modified time: 2024-05-30 18:29:21
+# @Date:   2024-06-29 16:44:04
+# @Info:   Docker compose for managing containers for the PAC-MAN website
+# ============================================================================
 
-version: '3.8'
+version: '3.9'
 
 services:
-  app:
+  backend:
+    image: pacman-backend:0.1.0
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ../backend
+      dockerfile: docker/Dockerfile
+    container_name: pacman-backend
+    volumes:
+      - ../backend:/app
     ports:
       - "8000:8000"
+    depends_on:
+      - db
+
+  frontend:
+    image: pacman-frontend:0.1.0
+    build:
+      context: ../frontend
+      dockerfile: docker/Dockerfile
+    container_name: pacman-frontend
     volumes:
-      - .:/app
-    environment:
-      - ENV=development
+      - ../frontend:/app
+    ports:
+      - "8080:8080"
 
   db:
-    image: postgres:13
-    restart: always
+    image: postgres:16
+    container_name: pacman-postgres
     environment:
-      POSTGRES_USER: example
-      POSTGRES_PASSWORD: example
-      POSTGRES_DB: example_db
-    ports:
-      - "5432:5432"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: pacman
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
