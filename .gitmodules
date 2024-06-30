@@ -1,9 +1,3 @@
-[submodule "modules/react-frontend-core"]
-	path = modules/react-frontend-core
-	url = git@github.com:ramironunes/react-frontend-core.git
-[submodule "modules/scripts-core"]
-	path = modules/scripts-core
-	url = git@github.com:ramironunes/scripts-core.git
 [submodule "modules/angular-core"]
 	path = modules/angular-core
 	url = git@github.com:ramironunes/angular-core.git
