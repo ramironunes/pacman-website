@@ -1,0 +1,26 @@
+# Use the base image of Node.js 20
+FROM node:20
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Install the Angular CLI globally
+RUN npm install -g @angular/cli
+
+# Copy the project files
+COPY . /app
+
+# Install the project dependencies
+RUN npm install
+
+# Build the Angular application
+RUN ng build --configuration production
+
+# Install the HTTP server to serve the Angular application
+RUN npm install -g http-server
+
+# Expose the port that the HTTP server will use
+EXPOSE 8080
+
+# Command to serve the built Angular application
+CMD ["http-server", "dist/frontend"]
