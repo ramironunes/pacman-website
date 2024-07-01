@@ -1,0 +1,23 @@
+# Use the base image of Python 3.11
+FROM python:3.11
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the requirements file from the root backend directory into the container
+COPY ../../backend/config/requirements.txt /app/config/
+
+# Install the project dependencies
+RUN pip install --no-cache-dir -r /app/config/requirements.txt
+
+# Copy the entire backend project into the container
+COPY ../../backend /app
+
+# Add the `src` directory to the Python path
+ENV PYTHONPATH="/app/src"
+
+# Expose the port that the FastAPI app will use
+EXPOSE 8000
+
+# Command to run the FastAPI application in development mode
+CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

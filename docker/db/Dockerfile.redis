@@ -1,0 +1,4 @@
+FROM redis:latest
+# Add any custom configuration here
+# COPY redis.conf /usr/local/etc/redis/redis.conf
+# CMD ["redis-server", "/usr/local/etc/redis/redis.conf"]

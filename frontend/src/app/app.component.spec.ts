@@ -1,11 +1,3 @@
-/**
- * ===========================================================================
- * @Author: Ramiro Luiz Nunes
- * @Date:   2024-06-30 10:07:06
- * @Info:   A brief description of the file
- * ===========================================================================
- */
-
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
