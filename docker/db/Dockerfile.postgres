@@ -1,0 +1,3 @@
+FROM postgres:16
+# Add any custom configuration or initialization scripts here
+# COPY init.sql /docker-entrypoint-initdb.d/

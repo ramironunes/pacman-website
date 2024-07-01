@@ -1,0 +1,23 @@
+# Use the base image of Node.js 20
+FROM node:20
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Install the Angular CLI globally
+RUN npm install -g @angular/cli
+
+# Copy the package.json and package-lock.json files from the root frontend directory to the working directory
+COPY ../../frontend/package.json ../../frontend/package-lock.json ./
+
+# Install the project dependencies
+RUN npm install
+
+# Copy the entire frontend project into the container
+COPY ../../frontend /app
+
+# Expose the port that the Angular app will use
+EXPOSE 4200
+
+# Command to run the Angular application in development mode
+CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "4200"]

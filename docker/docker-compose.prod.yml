@@ -1,0 +1,37 @@
+# ============================================================================
+# @Author: Ramiro Luiz Nunes
+# @Date:   2024-06-30 19:58:36
+# @Info:   Docker compose to manage prod containers for the PAC-MAN site
+# ============================================================================
+
+version: '3.9'
+
+services:
+  db:
+    extends:
+      file: ./db/docker-compose.db.yml
+      service: db
+
+  redis:
+    extends:
+      file: ./db/docker-compose.db.yml
+      service: redis
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile.prod
+    container_name: pacman-fastapi-prod
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend/Dockerfile.prod
+    container_name: pacman-angular-prod
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres_data:

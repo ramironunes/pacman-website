@@ -1,0 +1,41 @@
+# ============================================================================
+# @Author: Ramiro Luiz Nunes
+# @Date:   2024-06-30 19:58:36
+# @Info:   Docker compose to manage dev containers for the PAC-MAN site
+# ============================================================================
+
+version: '3.9'
+
+services:
+  db:
+    extends:
+      file: ./db/docker-compose.db.yml
+      service: db
+
+  redis:
+    extends:
+      file: ./db/docker-compose.db.yml
+      service: redis
+
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/backend/Dockerfile.dev
+    container_name: pacman-fastapi-dev
+    volumes:
+      - ../backend:/app
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: docker/frontend/Dockerfile.dev
+    container_name: pacman-angular-dev
+    volumes:
+      - ../frontend:/app
+    ports:
+      - "4200:4200"
+
+volumes:
+  postgres_data:
