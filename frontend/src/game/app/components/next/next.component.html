@@ -1,0 +1,17 @@
+<!--
+  ============================================================================
+  @Author: Ramiro Luiz Nunes
+  @Date:   2024-07-01 20:27:17
+  @Info:   Next template
+  ============================================================================
+-->
+
+<p>Next</p>
+<div class="next">
+    <div class="row"
+         *ngFor="let row of next()">
+        <g-tile [tile]='tile'
+                *ngFor="let tile of row">
+        </g-tile>
+    </div>
+</div>

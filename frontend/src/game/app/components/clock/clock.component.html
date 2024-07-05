@@ -1,0 +1,13 @@
+<!--
+  ============================================================================
+  @Author: Ramiro Luiz Nunes
+  @Date:   2024-07-01 20:27:17
+  @Info:   Clock template
+  ============================================================================
+-->
+
+<div class="number">
+    <span *ngFor="let item of clock$ | async"
+          [ngClass]="['bg', 'num', 'num-' + item]">
+    </span>
+</div>

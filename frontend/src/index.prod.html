@@ -1,0 +1,39 @@
+<!--
+  ============================================================================
+  @Author: Ramiro Luiz Nunes
+  @Date:   2024-07-01 20:27:17
+  @Info:   https://github.com/ramironunes/tetris
+  ============================================================================
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tetris Game built with Akita</title>
+    <base href="/">
+    <script>(function () { var w = parseInt(window.screen.width), s = w / 640, u = navigator.userAgent.toLowerCase(), m = '<meta name="viewport" content="width=640,'; if (/android (\d+\.\d+)/.test(u)) { if (parseFloat(RegExp.$1) > 2.3) m += 'minimum-scale=' + s + ',maximum-scale=' + s + ','; } else { m += 'user-scalable=no,'; } m += 'target-densitydpi=device-dpi">'; document.write(m); }());</script>
+      <!-- Primary Meta Tags -->
+    <meta name="title" content="Tetris Game built with Angular and Akita">
+    <meta name="description" content="A childhood memory Tetris game built with Angular and Akita.">
+
+    <link rel="image_src" href="assets/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+  </head>
+
+  <body>
+    <app-root></app-root>
+    <script src="/game/assets/js/AudioContextMonkeyPatch.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80363801-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-80363801-6');
+    </script>
+  </body>
+
+</html>

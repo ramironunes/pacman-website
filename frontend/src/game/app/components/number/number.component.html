@@ -1,0 +1,13 @@
+<!--
+  ============================================================================
+  @Author: Ramiro Luiz Nunes
+  @Date:   2024-07-01 20:27:17
+  @Info:   Number template
+  ============================================================================
+-->
+
+<div class="number">
+    <span *ngFor="let sequence of nums"
+          [ngClass]="['bg', 'num', 'num-' + sequence]">
+    </span>
+</div>

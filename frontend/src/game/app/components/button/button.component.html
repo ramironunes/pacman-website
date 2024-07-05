@@ -1,0 +1,20 @@
+<!--
+  ============================================================================
+  @Author: Ramiro Luiz Nunes
+  @Date:   2024-07-01 20:27:17
+  @Info:   Button template
+  ============================================================================
+-->
+
+<div [ngClass]="['button', className]"
+     [style.top.px]="top"
+     [style.left.px]="left">
+
+    <i [class.active]="active"></i>
+    <em *ngIf="arrowButton"
+        [ngStyle]="{'transform': arrowTransforms}"></em>
+
+    <span [class.absolute]="isAbsolute">
+        <ng-content></ng-content>
+    </span>
+</div>
