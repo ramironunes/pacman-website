@@ -1,8 +1,13 @@
-# Use the base image of Node.js 20
-FROM node:20
+# Use the base image of Ubuntu
+FROM ubuntu:20.04
 
 # Set the working directory inside the container
 WORKDIR /app
+
+# Install curl, Node.js, npm, and other dependencies
+RUN apt-get update && apt-get install -y curl gnupg2 build-essential \
+    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs
 
 # Install the Angular CLI globally
 RUN npm install -g @angular/cli
@@ -11,7 +16,7 @@ RUN npm install -g @angular/cli
 COPY ../../frontend/package.json ../../frontend/package-lock.json ./
 
 # Install the project dependencies
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 # Copy the entire frontend project into the container
 COPY ../../frontend /app

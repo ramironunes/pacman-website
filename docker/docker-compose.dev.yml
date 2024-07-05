@@ -1,7 +1,7 @@
 # ============================================================================
 # @Author: Ramiro Luiz Nunes
 # @Date:   2024-06-30 19:58:36
-# @Info:   Docker compose to manage dev containers for the PAC-MAN site
+# @Info:   Docker compose to manage development containers for the Tetris
 # ============================================================================
 
 version: '3.9'
@@ -9,19 +9,19 @@ version: '3.9'
 services:
   db:
     extends:
-      file: ./db/docker-compose.db.yml
+      file: ./docker-compose.db.yml
       service: db
 
   redis:
     extends:
-      file: ./db/docker-compose.db.yml
+      file: ./docker-compose.db.yml
       service: redis
 
   backend:
     build:
       context: ..
       dockerfile: docker/backend/Dockerfile.dev
-    container_name: pacman-fastapi-dev
+    container_name: tetris-fastapi-dev
     volumes:
       - ../backend:/app
     ports:
@@ -31,7 +31,7 @@ services:
     build:
       context: ..
       dockerfile: docker/frontend/Dockerfile.dev
-    container_name: pacman-angular-dev
+    container_name: tetris-angular-dev
     volumes:
       - ../frontend:/app
     ports:

@@ -1,15 +1,15 @@
-# PAC-MAN Website
+# Tetris
 
 ## Introduction
 
-PAC-MAN is a classic arcade game developed by Namco and first released in Japan on May 22, 1980. Created by game designer Toru Iwatani, PAC-MAN was intended to appeal to a broad audience by featuring a non-violent, maze-chase gameplay that contrasted sharply with the space shooter games popular at the time. The game became a cultural icon and a milestone in video game history, renowned for its innovative design, charming character, and widespread popularity.
+Tetris is a classic tile-matching puzzle game originally designed and programmed by Soviet Russian software engineer Alexey Pajitnov. It was released on June 6, 1984, and has since become one of the most iconic and widely recognized video games in history. The game involves different shaped tetrominoes that fall into a playfield, and the objective is to manipulate these shapes to form complete lines, which then disappear, earning the player points.
 
 ## Project Overview
 
-This project aims to build a comprehensive website dedicated to the game PAC-MAN. The website will include the following features:
+This project aims to build a comprehensive website dedicated to the game Tetris. The website will include the following features:
 
-1. **PAC-MAN Game**: A full implementation of the PAC-MAN game, allowing users to play directly on the site.
-2. **AI Autonomy**: Development and integration of an artificial intelligence that can play PAC-MAN autonomously, tested in various scenarios to evaluate its performance.
+1. **Tetris Game**: A full implementation of the Tetris game, allowing users to play directly on the site.
+2. **AI Autonomy**: Development and integration of an artificial intelligence that can play Tetris autonomously, tested in various scenarios to evaluate its performance.
 3. **Data Analysis**: Display of gameplay statistics and other relevant data.
 
 The project utilizes Docker to manage the application, encompassing frontend (Angular), backend (FastAPI), and database (PostgreSQL) components.
@@ -26,8 +26,8 @@ The project utilizes Docker to manage the application, encompassing frontend (An
 1. **Clone the Repository**:
 
     ```sh
-    git clone git@github.com:ramironunes/pacman-website.git
-    cd pacman-website
+    git clone git@github.com:ramironunes/tetris-website.git
+    cd tetris-website
     ```
 
 2. **Initialize Submodules**:
@@ -57,7 +57,7 @@ The project utilizes Docker to manage the application, encompassing frontend (An
 - **Language**: TypeScript
 - **Framework**: Angular
 - **Dependencies**: Managed via `package.json`
-- **Port**: 8080
+- **Port**: 4200
 
 ### Database (PostgreSQL)
 
@@ -66,7 +66,7 @@ The project utilizes Docker to manage the application, encompassing frontend (An
 - **Environment Variables**:
   - `POSTGRES_USER`: postgres
   - `POSTGRES_PASSWORD`: postgres
-  - `POSTGRES_DB`: pacman
+  - `POSTGRES_DB`: tetris
 
 ## Docker Compose Configuration
 
