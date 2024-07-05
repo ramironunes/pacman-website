@@ -1,7 +1,7 @@
 # ============================================================================
 # @Author: Ramiro Luiz Nunes
 # @Date:   2024-06-30 20:04:51
-# @Info:   Docker compose to manage DB containers for the PAC-MAN site
+# @Info:   Docker compose to manage DB containers for the Tetris
 # ============================================================================
 
 version: '3.9'
@@ -9,11 +9,11 @@ version: '3.9'
 services:
   db:
     image: postgres:16
-    container_name: pacman-postgres
+    container_name: tetris-postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: pacman
+      POSTGRES_DB: tetris
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -21,7 +21,7 @@ services:
 
   redis:
     image: redis:latest
-    container_name: pacman-redis
+    container_name: tetris-redis
     ports:
       - "6379:6379"
 
