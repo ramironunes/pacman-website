@@ -1,0 +1,17 @@
+<!--
+  ============================================================================
+  @Author: Ramiro Luiz Nunes
+  @Date:   2024-07-01 20:27:17
+  @Info:   Hold template
+  ============================================================================
+-->
+
+<p>Hold</p>
+<div class="hold">
+    <div class="row"
+         *ngFor="let row of hold()">
+        <g-tile [tile]='tile'
+                *ngFor="let tile of row">
+        </g-tile>
+    </div>
+</div>

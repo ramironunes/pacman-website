@@ -1,0 +1,12 @@
+<!--
+  ============================================================================
+  @Author: Ramiro Luiz Nunes
+  @Date:   2024-07-01 20:27:17
+  @Info:   Point template
+  ============================================================================
+-->
+
+<div *ngIf="labelAndPoints$ | async as labelAndPoint">
+    <p>{{ labelAndPoint.label }}</p>
+    <g-number [num]="labelAndPoint.points"></g-number>
+</div>

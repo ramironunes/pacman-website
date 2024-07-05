@@ -1,0 +1,34 @@
+<!--
+  ============================================================================
+  @Author: Ramiro Luiz Nunes
+  @Date:   2024-07-01 20:27:17
+  @Info:   Tetris game template
+  ============================================================================
+-->
+
+<div class="react"
+     [class.drop]='drop()'>
+    <g-screen-decoration></g-screen-decoration>
+    <div class="screen">
+        <div class="panel">
+            <g-matrix></g-matrix>
+            <g-logo *ngIf="isShowLogo$ | async"></g-logo>
+            <div class="state">
+                <div class="last-row">
+                    <g-sound></g-sound>
+                    <g-pause></g-pause>
+                    <g-clock></g-clock>
+                </div>
+                <g-point></g-point>
+                <g-start-line></g-start-line>
+                <g-level></g-level>
+                <g-next></g-next>
+                <g-hold></g-hold>
+            </div>
+        </div>
+    </div>
+</div>
+<g-keyboard [filling]="filling"
+            (onMouseDown)="keyboardMouseDown($event)"
+            (onMouseUp)="keyboardMouseUp($event)">
+</g-keyboard>

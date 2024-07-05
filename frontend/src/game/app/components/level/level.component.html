@@ -1,0 +1,18 @@
+<!--
+  ============================================================================
+  @Author: Ramiro Luiz Nunes
+  @Date:   2024-07-01 20:27:17
+  @Info:   Level template
+  ============================================================================
+-->
+
+<p>Level</p>
+<g-number *ngIf="hasCurrent(); else initSpeedTmpl"
+          [num]="speed()"
+          [length]="1">
+</g-number>
+<ng-template #initSpeedTmpl>
+    <g-number [num]="initSpeed()"
+              [length]="1">
+    </g-number>
+</ng-template>

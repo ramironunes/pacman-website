@@ -1,0 +1,23 @@
+<!--
+  ============================================================================
+  @Author: Ramiro Luiz Nunes
+  @Date:   2024-07-01 20:27:17
+  @Info:   Start-line template
+  ============================================================================
+-->
+
+<p>
+    <span *ngIf="hasCurrent() else startingTmpl">
+        Lines
+    </span>
+</p>
+<g-number *ngIf="hasCurrent() else initLineTmpl"
+          [num]="clearedLines()">
+</g-number>
+<ng-template #startingTmpl>
+    Start Line
+</ng-template>
+<ng-template #initLineTmpl>
+    <g-number [num]="initLine()">
+    </g-number>
+</ng-template>

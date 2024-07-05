@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+/**
+ * ===========================================================================
+ * @Author: Ramiro Luiz Nunes
+ * @Date:   2024-07-01 20:27:17
+ * @Info:   A brief description of the file
+ * ===========================================================================
+ */
+
+@import '../src/game/app/styles/tetris.scss';
+
+g-keyboard, g-button {
+  touch-action: pan-x pan-y pinch-zoom;
+}
