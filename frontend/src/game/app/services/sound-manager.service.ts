@@ -9,7 +9,7 @@
 import { TetrisStateService } from '@tetris-game/state/tetris.state';
 import { Injectable, inject } from '@angular/core';
 
-const SOUND_FILE_PATH = '/assets/tetris-sound.mp3';
+const SOUND_FILE_PATH = '/game/assets/tetris-sound.mp3';
 
 @Injectable({
   providedIn: 'root'
