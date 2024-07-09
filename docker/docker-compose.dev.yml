@@ -24,6 +24,8 @@ services:
     container_name: tetris-fastapi-dev
     volumes:
       - ../backend:/app
+      - ../modules/fastapi-core:/app/modules/fastapi-core
+      - ../modules/python-core:/app/modules/python-core
     ports:
       - "8000:8000"
 
@@ -34,6 +36,7 @@ services:
     container_name: tetris-angular-dev
     volumes:
       - ../frontend:/app
+      - ../modules/angular-core:/app/modules/angular-core
     ports:
       - "4200:4200"
 
