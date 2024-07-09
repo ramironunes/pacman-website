@@ -7,3 +7,6 @@
 [submodule "scripts"]
 	path = scripts
 	url = git@github.com:ramironunes/scripts-core.git
+[submodule "modules/python-core"]
+	path = modules/python-core
+	url = git@github.com:ramironunes/python-core.git
