@@ -19,10 +19,11 @@ import { ScreenDecorationComponent } from '@tetris-game/components/screen-decora
 import { SoundComponent } from '@tetris-game/components/sound/sound.component';
 import { StartLineComponent } from '@tetris-game/components/start-line/start-line.component';
 import { TetrisKeyboard } from '@tetris-game/interface/keyboard';
-import { SoundManagerService } from '@tetris-game/services/sound-manager.service';
 import { KeyboardService } from '@tetris-game/services/keyboard.service';
+import { SoundManagerService } from '@tetris-game/services/sound-manager.service';
 import { TetrisService } from '@tetris-game/services/tetris.service';
 import { TetrisStateService } from '@tetris-game/state/tetris.state';
+
 import { AsyncPipe, NgIf } from '@angular/common';
 import {
   ChangeDetectionStrategy,
@@ -31,7 +32,7 @@ import {
   HostListener,
   OnInit,
   Renderer2,
-  inject
+  inject,
 } from '@angular/core';
 
 const KeyUp = 'document:keyup';
@@ -41,8 +42,8 @@ const KeyDown = 'document:keydown';
   selector: 'tetris-game', // eslint-disable-line @angular-eslint/component-selector
   standalone: true,
   imports: [
-    NgIf,
     AsyncPipe,
+    NgIf,
     ClockComponent,
     HoldComponent,
     KeyboardComponent,
@@ -54,7 +55,7 @@ const KeyDown = 'document:keydown';
     PointComponent,
     ScreenDecorationComponent,
     SoundComponent,
-    StartLineComponent
+    StartLineComponent,
   ],
   templateUrl: './tetris-game.component.html',
   styleUrls: ['./tetris-game.component.scss'],

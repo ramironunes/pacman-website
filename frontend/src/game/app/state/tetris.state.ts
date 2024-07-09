@@ -1,3 +1,11 @@
+/**
+ * ===========================================================================
+ * @Author: Ramiro Luiz Nunes
+ * @Date:   2024-07-01 20:27:17
+ * @Info:   Tetris state service
+ * ===========================================================================
+ */
+
 import { PieceFactory } from '@tetris-game/factory/piece-factory';
 import { GameState } from '@tetris-game/interface/game-state';
 import { Piece } from '@tetris-game/interface/piece/piece';

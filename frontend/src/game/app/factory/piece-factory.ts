@@ -6,8 +6,8 @@
  * ===========================================================================
  */
 
-import { Piece } from '../interface/piece/piece';
 import { NonePiece } from '../interface/piece/none';
+import { Piece } from '../interface/piece/piece';
 import { PieceI } from '../interface/piece/I';
 import { PieceJ } from '../interface/piece/J';
 import { PieceL } from '../interface/piece/L';
