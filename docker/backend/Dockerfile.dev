@@ -5,10 +5,10 @@ FROM python:3.11
 WORKDIR /app
 
 # Copy the requirements file from the root backend directory into the container
-COPY ../../backend/config/requirements.txt /app/config/
+COPY ../../backend/configs/requirements.txt /app/configs/
 
 # Install the project dependencies
-RUN pip install --no-cache-dir -r /app/config/requirements.txt
+RUN pip install --no-cache-dir -r /app/configs/requirements.txt
 
 # Copy the entire backend project into the container
 COPY ../../backend /app
